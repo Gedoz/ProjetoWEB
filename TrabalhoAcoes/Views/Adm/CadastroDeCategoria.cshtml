@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<nav class="navbar-default navbar-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu">
+            <li>
+                <a>@Html.ActionLink("Categorias", "Administrador")</a>
+            </li>
+
+            <li>
+                <a>@Html.ActionLink("Entidades", "ListaDeEntidades")</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Entidade DASHBOARD</h2>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+        <hr />
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="alert alert-info">
+                    <strong>Cadastro de Categoriaa</strong>
+                </div>
+                <div>
+                    <input type="text" class="form-control" placeholder="Nome da categoria" aria-describedby="basic-addon1">
+                    <br />
+                    <input type="text" class="form-control" placeholder="Email para contato" aria-describedby="basic-addon1">
+
+                    <br />
+
+                    <div class="form-group">
+                        Tipos de categoria:
+                        <select class="form-control" id="sel1">
+                            <option>Categoria 1</option>
+                            <option>Categoria 2</option>
+                            <option>Categoria 3</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+
+                    <br />
+
+                    <div class="form-group">
+                        Descrição:
+                        <textarea class="form-control" rows="5" id="descricao"></textarea>
+                    </div>
+
+                    <br />
+
+                    <button class="btn btn-default" style="float: right" onclick="CadastroEfetuado()">Cadastrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

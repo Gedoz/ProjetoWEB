@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/style/main.css" rel="stylesheet" />
+    <link href="~/style/login.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>@Html.ActionLink("Home", "Index")</li>
+                <li>@Html.ActionLink("Cadastro", "Cadastro")</li>
+            </ul>
+            <h1 class="text-muted">Uniftec </h1>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/js/script.js"></script>
+

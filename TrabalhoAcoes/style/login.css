@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+}
+
+.logo img {
+    align-self: center;
+    margin: auto;
+}
+
+.corpoLogin .formLogin{
+	margin-top: 1em;
+}
+
+.corpoLogin .botaoLoginEntrar{
+	margin-top: 1em;
+	float: right;
+
+}

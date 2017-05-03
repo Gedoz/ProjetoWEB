@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml"; ;
+}
+
+
+    <div class="logo row"><img src="~/media/logo1.png"></div>
+    <br />
+    <div class="corpoLogin row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon glyphicon-envelope"></span>
+                <input type="text" class="form-control" placeholder="Email">
+            </div>
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                <input type="text" class="form-control" placeholder="Password">
+            </div>
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                <input type="text" class="form-control" placeholder="Re-Password">
+            </div>
+            <button class="btn btn-default form-control botaoLoginEntrar">Criar conta</button>
+            <button class="btn btn-default form-control botaoLoginEntrar">@Html.ActionLink("Voltar ao login", "Login")</button>
+            <div class="col-md-2"></div>
+        </div>   
+    </div>
+    
+
