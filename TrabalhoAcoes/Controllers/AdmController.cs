@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using TrabalhoAcoes.Filtro;
 using TrabalhoAcoes.Models;
 
 namespace TrabalhoAcoes.Controllers
@@ -9,8 +10,14 @@ namespace TrabalhoAcoes.Controllers
     {
 
         // GET: Adm
+        [FiltroAcesso]
         public ActionResult Index()
         {
+            if (Session["Usuario"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             return View();
         }
 

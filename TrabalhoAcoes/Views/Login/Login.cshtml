@@ -6,20 +6,26 @@
 <div class="logo row"><img src="~/media/logo1.png"></div>
 <br />
 <div class="corpoLogin row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <div class="input-group formLogin">
-            <span class="input-group-addon glyphicon glyphicon-user"></span>
-            <input type="text" class="form-control" placeholder="Username">
-        </div>
-        <div class="input-group formLogin">
-            <span class="input-group-addon glyphicon glyphicon-lock"></span>
-            <input type="text" class="form-control" placeholder="Password">
-        </div>
+    <form action=@Url.Action("Autenticar", "Login") method="post">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário">
+            </div>
+            <div class="input-group formLogin">
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                <input class="form-control" type="password" id="senha" name="senha" placeholder="Senha">
+            </div>
 
-        <button class="btn btn-default form-control botaoLoginEntrar">Entrar</button>
-        <button class="btn btn-default form-control botaoLoginEntrar">@Html.ActionLink("Criar Conta", "CriarConta")</button>
-        <a href="https://google.com.br">Esqueceu sua senha?</a>
-    </div>
-    <div class="col-md-2"></div>
+            <input  class="btn btn-default form-control botaoLoginEntrar"  value="Logar" type="submit" />
+            <button class="btn btn-default form-control botaoLoginEntrar">@Html.ActionLink("Criar Conta", "CriarConta")</button>
+            <a href="https://google.com.br">Esqueceu sua senha?</a>
+        </div>
+        <div class="col-md-2"></div>
+      
+
+
+    </form>
+    
 </div>

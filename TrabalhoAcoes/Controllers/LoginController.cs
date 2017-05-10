@@ -26,6 +26,21 @@ namespace TrabalhoAcoes.Controllers
 
         public ActionResult Autenticar(string usuario, string senha)
         {
+            if (usuario.Equals("usuario") && senha.Equals("12345"))
+            {
+                Session["Usuario"] = usuario;
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                Session["Usuario"] = null;
+                return RedirectToAction("Login");
+            }
+        }
+
+        public ActionResult Logout()
+        {
+            Session["Usuario"] = null;
             return RedirectToAction("Login");
         }
 
